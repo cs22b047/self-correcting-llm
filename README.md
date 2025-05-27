@@ -6,6 +6,7 @@
 
 ```
 git clone https://github.com/cs22b047/self-correcting-llm.git
+cd self-correcting-llm
 ```
 2. Install dependencies
 

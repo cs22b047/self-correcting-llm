@@ -1,5 +1,5 @@
-flask==2.3.3
-transformers==4.40.0
-torch>=2.0
+flask
+transformers
+torch
 sentencepiece
-accelerate>=0.21 
+accelerate
