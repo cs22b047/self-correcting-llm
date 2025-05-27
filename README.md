@@ -104,6 +104,10 @@ I focused on interpreting complex legal clauses into plain English and ensuring 
 | 4 | Any disputes shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. | All arguments will be settled using arbitration under AAA rules. | Any legal disputes will be settled by binding arbitration, where a neutral third party makes a final decision, based on AAA rules. | Mention that court appeals are not possible in binding arbitration. | Disputes will be settled by binding arbitration, meaning a third party decides the outcome and the decision cannot be appealed in court. |
 | 5 | Time is of the essence in the performance of each party’s obligations. | Everyone must do their part on time. | It is crucial that each party meets deadlines and timing requirements, as delays may breach the contract. | Add consequences of missing deadlines. | Each party must meet all deadlines exactly; if not, it could lead to legal consequences like a breach of contract or termination. |
 
+#### Edge cases tested for:
+- Legally Ambiguous Clauses
+- Clause with Legal Jargon and Embedded References
+- Double Negatives or Unusual Legal Phrasing
 
 ## Evaluation
 
@@ -164,3 +168,10 @@ Spellbook : GPT-based assistant for contract drafting and review. Not open-sourc
 ## Web Interfce
 
 I have also implemented a basic web interface that uses a flask backend to run the above LLM logic.
+
+#### Features:
+
+- Chat style interaction
+- Step by step output display
+- Real-Time feedback loop
+- Option to start over with a new clause
