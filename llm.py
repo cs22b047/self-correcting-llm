@@ -10,7 +10,7 @@ CRITIC_PROMPT = (
     "Clause: {clause}\n\n"
     "Explanation: {explanation}\n\n"
     "Evaluate for: factual accuracy, clarity, completeness, and legal precision.\n\n"
-    "Your output format:\n\n[Critique]\n...\n\n[Suggested Correction]\n..."
+    "Output Corrected Explanation"
 )
 REWRITE_PROMPT = (
     "You previously explained the clause:\n{clause}\n\n"

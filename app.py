@@ -4,7 +4,6 @@ from llm import generate_explanation, generate_critique, rewrite_explanation
 app = Flask(__name__)
 app.secret_key = 'your-secret-key'
 
-
 @app.route('/reset', methods=['GET'])
 def reset():
     session.clear()
@@ -19,18 +18,23 @@ def chat():
         if 'clause' in request.form:
             clause = request.form['clause']
             initial = generate_explanation(clause)
-            critique = generate_critique(clause, initial)
-            corrected = rewrite_explanation(clause, initial, critique)
+            critique_output = generate_critique(clause, initial)
+
+            # Parse critique and improved explanation from output
+            critique_text = ""
+            improved_text = ""
+
+            improved_text = critique_output.strip()
 
             session['clause'] = clause
             session['initial'] = initial
-            session['critique'] = critique
-            session['final'] = corrected
+            session['critique'] = critique_text
+            session['final'] = improved_text
             session['history'] = [
                 {"role": "user", "text": clause},
                 {"role": "assistant", "text": f"Initial Explanation:\n{initial}"},
-                {"role": "assistant", "text": f"Critique:\n{critique}"},
-                {"role": "assistant", "text": f"Self-Corrected Explanation:\n{corrected}"}
+                # {"role": "assistant", "text": f"Critique:\n{critique_text}"},
+                {"role": "assistant", "text": f"Self-Corrected Explanation:\n{improved_text}"}
             ]
 
         elif 'user_critique' in request.form and request.form['user_critique'].strip():
