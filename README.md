@@ -175,3 +175,5 @@ I have also implemented a basic web interface that uses a flask backend to run t
 - Step by step output display
 - Real-Time feedback loop
 - Option to start over with a new clause
+
+![Screenshot from 2025-05-27 20-56-33](https://github.com/user-attachments/assets/94fd60fd-e110-446e-aa40-a64a52360474)
